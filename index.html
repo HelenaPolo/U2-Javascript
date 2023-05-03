@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <h3>Crear un programa que demani 2 números num1 i num2 dins del rang 1 al 50 i imprimiu:</h3>
-    <ul>
-        <li>Sumar tots dos números.</li>
-        <li>Mostrar si tots dos números introduïts són primers, si no ho són
-        mostrar a l'usuari que no són primers tots dos o un.</li>
-        <li>Mostrar si tots dos números introduïts són parells, si no ho són,
-        mostrar a l'usuari que no són parells tots dos o un.</li>
-        <li>Si el número 1 és menor que el número 2, imprimiu només els
-        nombres parells en el rang entre num1 i num2 en forma ascendent.</li>
-        <li>Si el número 1 és més gran que el número 2, imprimiu només els
-        nombres imparells en el rang entre num1 i num2 en forma descendent.</li>
-        <li>Si el número 1 és igual al número 2, imprimiu només un número; si és
-        primer , si és parell i com que són iguals el rang només imprimeix el
-        mateix número.</li>
-        <li>Si els números no compleixen alguna condició, cal notificar-ho a
-        l'usuari.</li>
-    </ul>   
-    <button onclick="resultats()">Prova'm</button> 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container animate-bg">
+            <img id="img1" src="assets/mano.jpg" alt="ma amb cartes del tarot">
+            <img id="img2" src="assets/mano2.jpg" alt="ma amb cartes del tarot">
+            <img id ="img3" src="assets/adivina.jpg" alt="adivinadora">
+            <div class="box">
+                <h3>Introdueix dos nombres i et mostrarem els següents resultats!</h3>
+                <ul>
+                    <li>La suma de tots dos números.</li>
+                    <li>Si algún d'ells és un nombre primer</li>
+                    <li>Si algún d'ells és un nombre parell</li>
+                    <li>Si el nombre introduït primer és més petit que el segon, mostrarem els
+                    nombres imparells en el rang entre el primer i el segon en forma ascendent.</li>
+                    <li>Si el nombre introduït primer és més gran que el segon, mostrarem els
+                    nombres imparells en el rang entre el primer i el segon en forma descendent.</li>
+                    <li>Si el primer nombre és igual al segon us mostrarem el resultat d'un nombre</li>
+                    <li>S'ha d'introduir un nombre d'1 al 50, la resta de caràcters no seràn vàlids </li>
+                </ul>   
+                <button onclick="resultats()">Prova'm !</button> 
+            </div>
+        </div>
+    </body>
 </html>

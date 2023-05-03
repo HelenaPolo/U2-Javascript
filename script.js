@@ -1,4 +1,5 @@
 let resultats = () => {
+//recollir els nombre i validar-los
 let num1 = prompt("Escriu un primer número de l'1 al 50");
 while (num1 < 1 || num1 >50 || num1 == "" || num1 == null || isNaN(num1)){
     num1 = prompt("El nombre introduït no és correcte, introdueix-ne un altre");
@@ -9,6 +10,8 @@ while (num2 < 1 || num2 >50 || num2 == "" || num2 == null || isNaN(num2)){
 }
 num1 = parseInt(num1);
 num2 = parseInt(num2);
+
+//resultats segons si són iguals o diferents
 let result = "Els nombres escollits són el " + num1 + " i el " + num2 + '\n';
     if(num1 === num2){
         result += suma(num1, num2) + '\n' 
@@ -28,11 +31,14 @@ let result = "Els nombres escollits són el " + num1 + " i el " + num2 + '\n';
         alert(result);
     }
 }
-let suma = (num1, num2) => {
+//funció suma
+const suma = (num1, num2) => {
     let resultat1 = num1 + num2;
     return "La suma és " + resultat1;
 
 }
+
+//funció nombres primers
 const primer1 = (num1) => {
     let esPrimer = true;
     txt = "El nombre " + num1 + " és primer";
@@ -65,8 +71,9 @@ const primer2 = (num2) => {
         txt = "El nombre " + num2 + " no és primer";
     }
     return txt;
-
 }
+
+//funció nombres parells
 const parell1 = (num1) => {
     txt = "El nombre " + num1 + " és parell";
 
@@ -83,6 +90,8 @@ const parell2 = (num2) => {
     }
     return txt;
 }
+
+//funció nombres ascendents
 const ascendent = (num1, num2) => {
     let parells = [];
     let txt ="";
@@ -98,6 +107,7 @@ const ascendent = (num1, num2) => {
         return txt;
     }
 }
+//funció nombres descendents
 const descendent = (num1, num2) => {
     let senars = [];
     let txt ="";

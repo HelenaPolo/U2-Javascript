@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #9900cc;
+}
+.container{
+    position: relative;
+    padding: 3px;
+    margin: 10% auto;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(90deg, #000, #323232);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    color: #d9d9d9;
+    font-size: 20px;
+}
+ul, li, button{
+    padding: .5vw;
+    list-style-position: inside;
+}
+button{
+    margin: .5rem;
+    background-color: #df80ff;
+    color: #d9d9d9;
+    text-transform: uppercase;
+}
+/*----Animació degradat colors*/ 
+.animate-bg:before, .animate-bg:after{
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -8px;
+    background: linear-gradient(120deg, #ffb3cc, #ff80ff, 
+    #ff4dff, #ff1aff,#cc00cc, #ff00aa, #ff4dc4,
+    #ff6699, #ecb3ff, #df80ff );
+    background-size: 300%;
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
+    z-index: -1;
+    animation: bgGradient 15s ease infinite;
+}
+@keyframes bgGradient{
+    0%{
+        background-position: 0% 200%;
+    }
+    50%{
+        background-position: 200% 0%;
+    }
+    100%{
+        background-position: 0% 300%;
+    }
+}
+.animate-bg:after{
+    filter: brightness(1.4);
+    filter: drop-shadow(18px 18px 20px blue);
+    filter: blur(15px);
+}
+/*----imatges----*/
+img{
+    z-index: 1;
+    height: 14vw;
+    position: fixed;
+}
+#img1{
+    bottom: 10%;
+    right: 20%;
+}
+#img2{
+    top: 3%;
+    left: 15%;
+}
+#img3{
+    top: 5%;
+    right: 10%;
+}
+/*----media queries----*/
+@media only screen and (max-width: 992px){
+    img{
+       display: none;
+    }
+}
+@media only screen and (min-width: 992px){
+    #img1{
+        bottom: 25%;
+        right: 15%;
+    }
+    #img2{
+        top: 3%;
+        left: 6%;
+    }
+    #img3{
+        top: 5%;
+        right: 0;
+    }
+}
+@media only screen and (min-width: 1200px){
+    #img1{
+        bottom: 20%;
+        right: 20%;
+    }
+    #img2{
+        top: 3%;
+        left: 10%;
+    }
+    #img3{
+        top: 5%;
+        right: 5%;
+    }
+}
